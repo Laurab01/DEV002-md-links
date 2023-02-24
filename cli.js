@@ -22,4 +22,6 @@ if (path) {
   }
 };
 
-
+// Prueba de directorio ./Testing
+// Prueba archivo con links ./Testing/PruebaconLinks.md
+// Prueba archivo sin Links ./Testing/PruebasinLinks.md
