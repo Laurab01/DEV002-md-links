@@ -1,4 +1,4 @@
-#!/usr/bin/env nodo
+#!/usr/bin/env node
 const { mdLinks } = require("./index.js");
 const chalk = require('chalk');
 const process = require('process');
@@ -25,3 +25,4 @@ if (path) {
 // Prueba de directorio ./Testing
 // Prueba archivo con links ./Testing/PruebaconLinks.md
 // Prueba archivo sin Links ./Testing/PruebasinLinks.md
+// npm i -g
