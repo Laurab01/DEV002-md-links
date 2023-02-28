@@ -26,3 +26,4 @@ if (path) {
 // Prueba archivo con links ./Testing/PruebaconLinks.md
 // Prueba archivo sin Links ./Testing/PruebasinLinks.md
 // npm i -g
+// mdlinks-laurab ./Testing
