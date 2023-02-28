@@ -37,7 +37,7 @@ Herramienta de línea de comando (CLI) que se ejecuta con Node.js, que permite l
 
  - Se realizó un diagrama de flujo para verificar el camino que se debía ir tomando a medida que se iba construyendo el proyecto.
 
- ![diagrama-de-flujo](./img/Diagrama de flujo.png)
+ ![diagrama-de-flujo](./img/Diagrama%20de%20flujo.png)
 
 ## 4. Proyecto
 
