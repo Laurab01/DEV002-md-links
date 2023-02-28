@@ -13,7 +13,7 @@ const {
 const chalk = require("chalk");
 
 const mdLinks = (path, options) => {
-  
+
   return new Promise((resolve) => {
     let mdFilesArray = [];
     if (existPath(path)) { 
@@ -30,7 +30,7 @@ const mdLinks = (path, options) => {
           } 
         });
       }else{
-        // Entra a validar cuando por el path se pasa el archivo .md: node cli.js ./Testing/PruebaconLinks.md --validate --stats
+        // Entra a validar cuando por el path se pasa el archivo .md: node cli.js ./testing/testConLinks01.md --validate --stats
         if(existMdFile(absolutePath)){ 
           mdFilesArray.push(absolutePath);
         }else{
@@ -38,14 +38,12 @@ const mdLinks = (path, options) => {
             console.log(chalk.bgYellow.bold('---------- WARNING: no .md files ----------'));          
         }
       }
-//--------------------------------------------------------------------------------------------------
-      //En esta sección comienza a validar los parámetros enviados: *--validate* y *--stats*
+//--------------------------------------------------------------------------------------------
+      //En esta sección comienza a validar los parámetros enviados: **--validate** y **--stats**
       //Este es el proceso para realizar el proceso de Validate y Stats ()
       if (options.validate === true && options.stats === true) {
-
         analyzeMdFilesArray(mdFilesArray)
           .then((result) => {
-            //console.log(result)
             getHttpResponse(result)
               .then((result) => {
                 const resultValidateAndStats = getResultValidateStats(result)
@@ -60,7 +58,6 @@ const mdLinks = (path, options) => {
         analyzeMdFilesArray(mdFilesArray)
           .then((result) => {
             getHttpResponse(result)
-            console.log(result)
               .then((result) => {
                 const validateLink = result
                 resolve(validateLink)
@@ -77,7 +74,7 @@ const mdLinks = (path, options) => {
             console.log(valueStats)
             resolve(valueStats)
           });
-      // Acá ingresa cuando no se tienen agregadas las banderas y se pasa la ruta completa
+      // Acá ingresa cuando no se tienen agregadas las banderas y se pasa unicamente el path
       } else {
         analyzeMdFilesArray(mdFilesArray)
           .then((result) => {
